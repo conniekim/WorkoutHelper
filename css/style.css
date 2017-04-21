@@ -1,0 +1,80 @@
+.navbar {
+	width: 6%;
+}
+
+.navbar .navbar-nav p {
+	font-size: 12px !important; 
+}
+
+.logo img {
+	width: 40px;
+	height: 40px;
+}
+
+#my-workout {
+	height: 100vh;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #e7e7e7;
+
+}
+
+#my-workout p {
+	line-height: 1.4em;
+	font-size: 28px;
+	font-weight: 600;
+	margin-top: 25%;
+	margin-left: -4%;
+	letter-spacing: 2px;
+}
+
+#my-workout small {
+	margin-left: 10%;
+	font-size: 14px;
+	line-height: 1.6180em;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+#my-workout .dropdown {
+	position: fixed;
+	margin-top: -3.4%;
+	margin-left: 22%;
+	z-index: 2;
+}
+
+#my-workout .dropdown-menu {
+	top: 140%;
+	left: -350%;
+}
+
+#my-workout .row {
+	height: auto !important;
+	margin-right: 10%;
+	margin-top: 15%;
+}
+
+#my-workout img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+}
+
+#my-workout .caption p {
+	text-align: center;
+	font-weight: 400;
+	font-size: 10px;
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+
+#create-workout {
+	height: 100vh;
+}
+
