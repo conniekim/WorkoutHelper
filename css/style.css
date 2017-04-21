@@ -188,9 +188,17 @@
 	margin-left: 25%;
 }
 #create-workout .col-md-1 {
-	margin-left: -2%;
-	margin-right: 1%;
+	margin-left: -3%;
+	margin-right: 3%;
+}
+#create-workout .next-button {
+	width: 50%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 25%;
 }
 
-
+#create-workout .btn {
+	border-radius: 300px;
+}
 
