@@ -1,0 +1,161 @@
+.col-center {  
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-xs-1, .col-xs-4, .col-xs-7 {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.navbar-column {
+	background-color: #000;
+	color: #fff;
+	/*position: fixed;*/
+	top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0,0,0,.5);
+    overflow: auto;
+    min-height: 0!important;
+}
+
+.nav {
+	height: 100%;
+}
+
+.middle-column {
+	background-color: #A9A9A9;
+	color: #fff;
+	padding-left: 100px;
+}
+
+.content-column {
+	background-color: #D3D3D3;
+	color: #fff;
+	height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 200;
+}
+
+.content {
+	overflow: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#page-layout {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+/* Calendar Start */
+
+.button img {
+	height: 40px;
+	cursor: pointer;
+}
+
+ul {
+	text-align: center;
+    overflow: auto;
+    width: 100%;
+    -webkit-padding-start: 0px;
+}
+
+li {
+	display: inline;
+	list-style-type: none;
+	float: left;
+    width: 33%;
+    font-size: 3em;
+}
+
+#prev-button {
+	text-align: left;
+}
+
+#next-button {
+	text-align: right;
+}
+
+table {
+	width: 100%;
+}
+
+th, td {
+	width: 14.28%;
+	text-align: center;
+	height: 2em;
+    font-size: 1.8em;
+}
+
+td {
+	cursor: pointer;
+}
+
+.task {
+	height: 50px;
+	width: 100%;
+	background-color: #696969;
+	margin-bottom: 5px;
+	display: flex;
+    display:-webkit-flex;
+    justify-content: flex-end;
+
+}
+
+.task-name {
+	margin-right: auto;
+	margin-left: 1em;
+	font-size: 1.5em;
+    color: #000;
+}
+
+.task-name, .remove, .edit {
+	align-self: center;
+}
+
+.current {
+	background-color: #A7383E;
+	border-radius: 50%;
+	opacity: 0.6;
+}
+
+.selected { /* On default, current date should be selected */
+	background-color: #A7383E;
+	border-radius: 50%;
+	opacity: 1 !important;
+}
+
+/* Calendar End */
+
+/* List Content Start */
+#list-content img {
+	height: 25px;
+	margin-right: 1em;
+}
+
+
+
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1400px !important;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+/*@media (min-width: 768px) {
+	.container {
+	    width: 100%;
+	}
+}*/
