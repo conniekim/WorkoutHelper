@@ -37,15 +37,15 @@
 }
 
 #my-workout .dropdown {
-	position: fixed;
-	margin-top: -3.4%;
-	margin-left: 22%;
+	position: relative;
+	margin-top: -12%;
+	margin-left: 82%;
 	z-index: 2;
 }
 
 #my-workout .dropdown-menu {
 	top: 140%;
-	left: -350%;
+	left: -180%;
 }
 
 #my-workout .row {
@@ -202,3 +202,51 @@
 	border-radius: 300px;
 }
 
+#workout-section h4{
+	margin-left: 1%;
+	text-align: left;
+}
+
+#workout-section .container-fluid{
+	height: 200px;
+	background-color: #C4C4C4;
+	opacity: 0.5;
+	margin-left: 2%;
+}
+
+#workout-section .arrow{
+	margin-left: 1%;
+	margin-top: 10%;
+}
+#workout-section .img{
+	color: #000;
+	opacity: 1;
+	margin-top: 10%;
+}
+#workout-section .thumbnail{
+	color: #fff;
+	opacity: 1;
+	margin-top: 7%;
+}
+
+#workout-section .removing{
+	width:15%; 
+	height: 15%; 
+	border-radius: 25px; 
+	border-color: #000;
+	border-style: solid;
+	border-width: 2px;
+	position: relative;
+	margin-left: 90%;
+	margin-top: -260%;
+}
+#workout-section .divided{
+	height: 20px;
+	width: 102%;
+	margin-left: -0.01%;
+	margin-top: -4.1%;
+	opacity: 0.8;
+}
+#workout-section p{
+	text-align: center;
+}

@@ -134,77 +134,169 @@
           <div class="col-xs-12 col-sm-8 col-md-8" id="create-workout">
             <h3> Create Workout</h3>
             <hr>
-            <div class="container">
-              <ul class="progressbar">
-                  <li class="active">Categories</li>
-                  <li>Workouts</li>
-                  <li>Review</li>
-              </ul>
+
+            <!-- categories section -->
+<!--             <div id="categories-section">
+              <div class="container">
+                <ul class="progressbar">
+                    <li class="active">Categories</li>
+                    <li>Workouts</li>
+                    <li>Review</li>
+                </ul>
+              </div>
+              <div class="form-group row size">
+                <div class="col-12">
+                  <input class="form-control" type="text" value="Workout Title" id="example-text-input">
+                </div>
+              </div>
+              <div class="col-12"> 
+                <h4> Workout Category/ Focus(es)</h4>
+              </div>
+
+              <div class="lists row">
+                <div class="col-12">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="option1">
+                      Heads
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="option1">
+                      Shoulders
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="option1">
+                      Abs
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="option1">
+                      Lower Body
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="option1">
+                      Upper Body
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12"> 
+                <h4> Workout Interval</h4>
+              </div>
+              <div class="row">
+                <div class="form-group row size-small">
+                  <div class="col-md-10">
+                    <input class="form-control resize-it" type="text" id="example-text-input">
+                  </div>
+                  <div class="col-md-1">
+                    <a class="btn btn-primary" href="#" role="button">secs</a>
+                  </div>
+                  <div class="col-md-1">
+                    <a class="btn btn-primary" href="#" role="button">mins</a>
+                  </div>
+                </div>
+              </div>
+              <div class=" next-button row">
+                <div class="col-12"><a class="btn btn-primary btn-lg btn-block" href="#" role="button">NEXT</a> </div>
+              </div>
+            </div> -->
+
+            <!-- workout sections -->
+            <div id="workout-section">
+              <div class="container">
+                <ul class="progressbar">
+                    <li>Categories</li>
+                    <li class="active">Workouts</li>
+                    <li>Review</li>
+                </ul>
+              </div>
+              <div class="row col-12"> 
+                <h4> Suggested Exercise</h4>
+              </div>
+
+              <div class="row col-12"> 
+                <div class="container-fluid">
+                  <div class="arrow col-md-1">
+                    <img src="img/left-arrow.svg">
+                  </div>
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                    <img src="img/003-weightlifting.svg" style="width:60%">
+                    <div class="caption">
+                      <p>Upper Body Mash-up</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="workout-icons col-md-3">
+                    <div class="thumbnail">
+                    <img src="img/003-weightlifting.svg" style="width:60%">
+                    <div class="caption">
+                      <p>Upper Body Mash-up</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="workout-icons col-md-3">
+                    <div class="thumbnail">
+                    <img src="img/003-weightlifting.svg" style="width:60%">
+                    <div class="caption">
+                      <p>Upper Body Mash-up</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="arrow col-md-1 resizing">
+                    <img src="img/right-arrow.svg">
+                  </div>
+                </div>
+              </div>
+              <div class="row col-12"> 
+                <h4> Selected Exercise</h4>
+              </div>
+              <div class="row col-12"> 
+                <div class="container-fluid">
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                    <img src="img/003-weightlifting.svg" style="width:60%">
+                    <div class="caption">
+                      <p>Upper Body Mash-up</p>
+                    </div>
+                    </div>
+                    <img src="img/remove.svg" class="removing">
+                  </div>
+                  <div class="workout-icons col-md-3">
+                    <div class="thumbnail">
+                    <img src="img/003-weightlifting.svg" style="width:60%">
+                    <div class="caption">
+                      <p>Upper Body Mash-up</p>
+                    </div>
+                    </div>
+                    <img src="img/remove.svg" class="removing">
+                  </div>
+                  <div class="workout-icons col-md-3">
+                    <div class="thumbnail">
+                    <img src="img/003-weightlifting.svg" style="width:60%">
+                    <div class="caption">
+                      <p>Upper Body Mash-up</p>
+                    </div>
+                    </div>
+                    <img src="img/remove.svg" class="removing">
+                  </div>
+                </div>
+              </div>
+              <div class="divided container-fluid">
+                <p> Durations: 2 mins</p> 
+              </div>
+              <div class=" next-button row">
+                <div class="col-12"><a class="btn btn-primary btn-lg btn-block" href="#" role="button">NEXT</a> </div>
+              </div>
             </div>
 
-            <div class="form-group row size">
-              <div class="col-12">
-                <input class="form-control" type="text" value="Workout Title" id="example-text-input">
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h4> Worout Category/ Focus(es)</h4>
-            </div>
-
-            <div class="lists row">
-              <div class="col-12">
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="option1">
-                    Heads
-                  </label>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="option1">
-                    Shoulders
-                  </label>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="option1">
-                    Abs
-                  </label>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="option1">
-                    Lower Body
-                  </label>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="option1">
-                    Upper Body
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-xs-12"> 
-              <h4> Workout Interval</h4>
-            </div>
-            <div class="row">
-              <div class="form-group row size-small">
-                <div class="col-md-10">
-                  <input class="form-control resize-it" type="text" id="example-text-input">
-                </div>
-                <div class="col-md-1">
-                  <a class="btn btn-primary" href="#" role="button">secs</a>
-                </div>
-                <div class="col-md-1">
-                  <a class="btn btn-primary" href="#" role="button">mins</a>
-                </div>
-              </div>
-            </div>
-            <div class=" next-button row">
-              <div class="col-12"><a class="btn btn-primary btn-lg btn-block" href="#" role="button">NEXT</a> </div>
-             </div>
           </div>
 
         </div>
