@@ -5,33 +5,78 @@
   margin-right: auto;
 }
 
-.col-xs-1, .col-xs-4, .col-xs-7 {
+.col-xs-1, .col-xs-4, .col-xs-5, .col-xs-7 {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
 }
 
-.navbar-column {
-	background-color: #000;
+/* Navbar start */
+
+.navbar-column a {
 	color: #fff;
-	/*position: fixed;*/
+}
+
+.navbar-column p {
+	font-size: 12px;
+}
+
+.navbar-column .hidden-xs {
+	display: block !important;
+}
+
+.navbar-column {
+	background-color: #D3D3D3;
+	color: #fff;
+	position: fixed;
 	top: 0;
     left: 0;
     height: 100vh;
     z-index: 100;
-    background-color: rgba(0,0,0,.5);
     overflow: auto;
     min-height: 0!important;
+    width: 110px;
 }
 
 .nav {
 	height: 100%;
 }
 
+.nav li {
+	width: 100%;
+}
+
+/* Middle Column -- My Workouts */ 
+
 .middle-column {
 	background-color: #A9A9A9;
 	color: #fff;
-	padding-left: 100px;
+	padding-left: 125px;
+	height: 100vh;
 }
+
+.thumbnail {
+	border-radius: 0px;
+	border: none;
+	box-shadow: none;
+	height: 13vw;
+	padding: 1em;
+}
+
+.thumbnail img {
+	height: 70%;
+	width: 60%;
+}
+
+.thumbnail img.add-img {
+	width: 50%;
+}
+
+.thumbnail p {
+	text-align: center; 
+	font-size: 1em;
+	line-height: 1.1em;
+}
+
 
 .content-column {
 	background-color: #D3D3D3;
@@ -43,7 +88,7 @@
 }
 
 .content {
-	overflow: auto;
+	overflow-x: hidden;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -54,6 +99,7 @@
 #page-layout {
 	padding-left: 0px;
 	padding-right: 0px;
+	overflow: hidden;
 }
 
 /* Calendar Start */
@@ -144,18 +190,179 @@ td {
 }
 
 
+h3 {
+	text-align: center;
+}
 
+hr {
+	width: 75%;
+}
+
+/*.form-control {
+	width: 50%;
+	margin: 0 auto;
+}*/
+
+/* Create Workout Column Start */
+#create-workout {
+	height: 100vh;
+}
+
+#create-workout h3 {
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+#create-workout .container{
+	width: 100%;
+	padding-left: 0px;
+}
+
+.progressbar {
+	align-content: center;
+}
+
+.progressbar li {
+  list-style-type: none;
+  width: 33%;
+  float: left;
+  font-size: 10px;
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+  color: #7d7d7d;
+}
+.progressbar li:before {
+  width: 50px;
+  height: 50px;
+  content: "";
+/*      counter-increment: step;*/
+  line-height: 50px;
+  border: 2px solid #7d7d7d;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+}
+.progressbar li:after {
+  width: 100%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #7d7d7d;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+  margin-top: 10px;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active {
+  color: green;
+}
+
+.progressbar li.active:before {
+  border-color: #55b776;
+}
+.progressbar li.active + li:after {
+  background-color: #55b776;
+}
+
+#create-workout .size {
+	width: 50%;
+	margin-left: 25%;
+}
+#create-workout input {
+	opacity: 0.8;
+	letter-spacing: 1px;
+}
+
+#create-workout h4 {
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+#create-workout .lists {
+	width: 50%;
+	margin: 0 auto;
+	height: 200px;
+	overflow: scroll;
+}
+
+#create-workout .form-check {
+	letter-spacing: 1px;
+	font-size: 12px;
+	font-weight: 400;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+}
+
+#create-workout .size-small {
+	width: 100%;
+}
+
+#create-workout .col-md-10 {
+	width: 38%;
+	margin-left: 25%;
+}
+#create-workout .col-md-1 {
+	margin-left: -3%;
+	margin-right: 3%;
+}
+#create-workout .next-button {
+	width: 50%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 25%;
+}
+
+#create-workout .btn {
+	border-radius: 300px;
+}
 
 @media (min-width: 1200px) {
 	.container {
-		width: 1400px !important;
+		min-width: 1400px;
+		width: inherit;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
+
+	#create-workout .lists {
+		width: 50%;
+	}
+
 }
 
-/*@media (min-width: 768px) {
-	.container {
-	    width: 100%;
+@media (max-width: 992px) {
+	#create-workout .lists {
+		width: 60%;
 	}
-}*/
+}
+
+
+@media (min-width: 992px) {
+	.container {
+	    min-width: 970px;
+	   	width: inherit;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.container {
+	    min-width: 750px;
+	    width: inherit;
+	}
+}
+
+@media (max-width: 768px) {
+	#create-workout .lists {
+		width: 70%;
+	}
+
+}
