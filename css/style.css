@@ -11,13 +11,13 @@
 	height: 40px;
 }
 
-#my-workout {
+/*#my-workout {
 	height: 100vh;
 	border-right-style: solid;
 	border-right-width: 1px;
 	border-right-color: #e7e7e7;
 
-}
+}*/
 
 #my-workout p {
 	line-height: 1.4em;
@@ -215,7 +215,7 @@
 }
 
 #workout-section .arrow{
-	margin-left: 1%;
+	margin-left: 1.17%;
 	margin-top: 10%;
 }
 #workout-section .img{
@@ -249,4 +249,11 @@
 }
 #workout-section p{
 	text-align: center;
+}
+#create-workout {
+	height: 100vh;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #e7e7e7;
+
 }
