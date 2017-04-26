@@ -1,14 +1,6 @@
 $(document).ready(function() {
 
-    // START JQUERY CALENDAR
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    }) 
-
-   	// END JQUERY CALEDNAR
-
     // START CUSTOM MADE CALENDAR
-
     var currYear = moment().format('YYYY'); //gets curr year
     var currWeek = moment().format('w');
     var today = moment().format('dddd'); //get today and don't change this
@@ -22,20 +14,20 @@ $(document).ready(function() {
 
     var changeWeek = 0; //clicking prev and next will increase or decrease this value and the dates SHOULD change in response??
     $('#prev-button').click(function() {
-        changeWeek--;
-        console.log("changeWeek" + changeWeek);
+        changeWeek--; //have the prev week stuff appear (already have it loaded and just display it)
+        // console.log("changeWeek" + changeWeek);
     });
 
     $('#next-button').click(function() {
-        changeWeek++;
-        console.log("changeWeek: " + changeWeek);
+        changeWeek++; //have next week stuff appear (already have it loaded and just display it)
+        // console.log("changeWeek: " + changeWeek);
     });
     /* For filling in the calendar of selected week, default = curr */
     var daysArray = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     for(var i = 0; i < daysArray.length; i++) {
     	var day = document.getElementById(daysArray[i]); 
-        console.log("currWeek: " + currWeek); 
-        console.log("currWeek+0: " + parseInt(currWeek)+0);
+        // console.log("currWeek: " + currWeek); 
+        // console.log("currWeek+0: " + parseInt(currWeek)+0);
     	day.innerHTML = moment().day(i).year(currYear).week(parseInt(currWeek) + changeWeek).date();
     }
 
@@ -69,10 +61,10 @@ $(document).ready(function() {
         $('td.date#' + query).addClass('selected');
     }
     /* Adding to TODO and COMPLETED tasks */
-	$.get("https://m6raqib0xd.execute-api.us-east-1.amazonaws.com/prod/ExerciseUpdate?TableName=Calendar", function(data, status) {
+	$.get("https://ykldkx5wj7.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=WorkoutUserInfoTest", function(data, status) {
 		var json = JSON.parse(JSON.stringify(data));
 		var items = json.Items;
-		var dict; 
+		var map; 
 		if (items) { 
             if (query === 'undefined') {
                 console.log("query is undefined because default");
@@ -81,35 +73,77 @@ $(document).ready(function() {
             }
 
 			for (var i = 0; i < items.length; i++) {
-				dict = items[i];
-				// var spacedQuery = query.replace(/\_/g, " ");
-				console.log("query: " + query);
-                console.log("day: " + dict.Day);
-				if (dict.Day.toLowerCase() === query.toLowerCase()) {
-                    console.log("they're matching!");
-					var toDos = dict.ToDo;
-					var completed = dict.Completed;
-                    if(toDos) {
-                        console.log("they have todos!");
-    					for (var j = 0; j < toDos.length; j++) {
-    						var toDoTask = toDos[j];
-    						$(".to-do").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + toDoTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
+				map = items[i];
 
-                       }
-                    }
-                    if(completed) {
-                        console.log("they have completed!");
-    					for (var k = 0; k < completed.length; k++) {
-    						var completedTask = completed[k];
-    						$(".completed").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + completedTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
-    					}
-                    }
-				}
+				console.log("query: " + query);
+                console.log("day: " + map.mapAttr['Monday']); //
+				// if (map.Day.toLowerCase() === query.toLowerCase()) {
+    //                 console.log("they're matching!");
+				// 	var toDos = dict.ToDo;
+				// 	var completed = dict.Completed;
+    //                 if(toDos) {
+    //                     console.log("they have todos!");
+    // 					for (var j = 0; j < toDos.length; j++) {
+    // 						var toDoTask = toDos[j];
+    // 						$(".to-do").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + toDoTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
+
+    //                    }
+    //                 }
+    //                 if(completed) {
+    //                     console.log("they have completed!");
+    // 					for (var k = 0; k < completed.length; k++) {
+    // 						var completedTask = completed[k];
+    // 						$(".completed").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + completedTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
+    // 					}
+    //                 }
+				// }
 			}
 		} else {
 			$(".to-do").text("No tasks found");
 		}
 	});
+
+    // $.get("https://m6raqib0xd.execute-api.us-east-1.amazonaws.com/prod/ExerciseUpdate?TableName=Calendar", function(data, status) {
+    //     var json = JSON.parse(JSON.stringify(data));
+    //     var items = json.Items;
+    //     var dict; 
+    //     if (items) { 
+    //         if (query === 'undefined') {
+    //             console.log("query is undefined because default");
+    //             query = moment().format('dddd'); 
+    //             console.log('default query: ' + query);
+    //         }
+
+    //         for (var i = 0; i < items.length; i++) {
+    //             dict = items[i];
+    //             // var spacedQuery = query.replace(/\_/g, " ");
+    //             console.log("query: " + query);
+    //             console.log("day: " + dict.Day);
+    //             if (dict.Day.toLowerCase() === query.toLowerCase()) {
+    //                 console.log("they're matching!");
+    //                 var toDos = dict.ToDo;
+    //                 var completed = dict.Completed;
+    //                 if(toDos) {
+    //                     console.log("they have todos!");
+    //                     for (var j = 0; j < toDos.length; j++) {
+    //                         var toDoTask = toDos[j];
+    //                         $(".to-do").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + toDoTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
+
+    //                    }
+    //                 }
+    //                 if(completed) {
+    //                     console.log("they have completed!");
+    //                     for (var k = 0; k < completed.length; k++) {
+    //                         var completedTask = completed[k];
+    //                         $(".completed").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + completedTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     } else {
+    //         $(".to-do").text("No tasks found");
+    //     }
+    // });
 
 
 
