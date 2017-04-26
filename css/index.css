@@ -739,3 +739,15 @@ hr {
   	}
 
 }
+
+#add-thumbnail:hover {
+	background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}

@@ -71,7 +71,7 @@ $(document).ready(function() {
     $.get("https://ykldkx5wj7.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=WorkoutUserInfoTest", function(data, status) {
         var json = JSON.parse(JSON.stringify(data));
         var items = json.Items;
-        var map; 
+        var map;  
         if(items) {
             map = items[0]; 
 
