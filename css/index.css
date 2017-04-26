@@ -498,7 +498,7 @@ hr {
 
 .popup {
   margin: 70px auto;
-  margin-top: 25%;
+  margin-top: 15%;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
@@ -531,10 +531,21 @@ hr {
 	cursor: pointer;
 
 }
+.popup th:hover {
+	background-color: #333333 !important;
+	color: #FBF9F4 !important;
+
+}
+
+.popup th:focus {
+	background-color: #333333 !important;
+	color: #FBF9F4 !important;
+
+}
 
 .popup .calendar-bottom {
-	width: 50%;
-	margin-left: 25%;
+	width: 75%;
+	margin-left: 12.5%;
 	background-color: #C4C4C4;
 
 }
@@ -542,9 +553,31 @@ hr {
 .popup .btn-sizing {
 	width: 50%;
 	margin-left: 25%;
+	margin-bottom: 1%;
+}
+.fr.focus, .fr:focus, .fr:hover{
+	background-color: #333333 !important;
+	color: #FBF9F4 !important;
 }
 .popup .mg {
 	margin-left: 48%;
+	color: #828282;
+}
+.popup .mg:hover {
+	text-decoration: none !important;
+	color: #333333;
+}
+.popup .fr {
+	border-radius: 0px !important;
+	background-color: #C4C4C4;
+	color: #333333;
+	font-size: 14px !important;
+	font-weight: 600;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.popup .mg-bottom {
+	margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
 	.container {
