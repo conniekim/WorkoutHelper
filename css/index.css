@@ -1,3 +1,24 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 100%;
+	color: #333333;
+}
+label {
+	font-family: 'Montserrat', sans-serif;
+	color: #333333;
+}
+h2, td, th {
+	color: #333333;
+}
+.btn {
+	background-color: #7CCCCB;
+	color: #FBF9F4;
+}
+.form-control {
+	background-color: #C0C5C3;
+}
 .col-center {  
   display: block;
   float: none;
@@ -11,6 +32,21 @@
 }
 
 /* Navbar start */
+.nav>li>a:focus, .nav>li>a:hover, .nav>li>a:active {
+	background-color: #FBF9F4;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #7CCCCB;
+	color: #7CCCCB;
+}
+
+.nav>li>a.active {
+	background-color: #FBF9F4;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #7CCCCB;
+	color: #7CCCCB;
+}
 
 .navbar-column a {
 	color: #fff;
@@ -25,7 +61,7 @@
 }
 
 .navbar-column {
-	background-color: #D3D3D3;
+	background-color: #7CCCCB;
 	color: #fff;
 	position: fixed;
 	top: 0;
@@ -48,10 +84,35 @@
 /* Middle Column -- My Workouts */ 
 
 .middle-column {
-	background-color: #A9A9A9;
+	background-color: #FBF9F4;
 	color: #fff;
 	padding-left: 125px;
 	height: 100vh;
+}
+
+.middle-column h3{
+	text-align: left;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+
+.dropdown {
+	position: relative;
+	margin-top: -12%;
+	margin-left: 92%;
+	z-index: 2;
+	margin-bottom: 10px;
+}
+
+.dropdown-menu {
+	font-size: 5px;
+	font-weight: normal;
+	min-width: 125px;
+	margin-left: -90px;
+}
+
+.dropdown-menu li {
+	float: none;
 }
 
 .thumbnail {
@@ -60,6 +121,10 @@
 	box-shadow: none;
 	height: 13vw;
 	padding: 1em;
+	background-color: #F2F2F2;
+	border-color: #BDBDBD;
+	border-style: solid;
+	border-width: 0.5px;
 }
 
 .thumbnail img {
@@ -77,14 +142,21 @@
 	line-height: 1.1em;
 }
 
+.thumbnail .caption {
+	margin-top: 18px;
+}
+
 
 .content-column {
-	background-color: #D3D3D3;
+	background-color: #FBF9F4;
 	color: #fff;
 	height: 100vh;
     top: 0;
     right: 0;
     z-index: 200;
+    border-left-color: #eee;
+    border-left-width: 3px;
+    border-left-style: solid;
 }
 
 .content {
@@ -123,7 +195,9 @@ li {
     width: 33%;
     font-size: 3em;
 }
-
+.calendar-top-content li {
+	margin-top: 55px;
+}
 #prev-button {
 	text-align: left;
 }
@@ -192,10 +266,20 @@ td {
 
 h3 {
 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 100%;
+	color: #333333;
+	margin-top: 90px;
 }
 
 hr {
 	width: 75%;
+}
+
+small {
+	color: #4F4F4F !important;
+	font-size: 50% !important;
+	margin-left: 28%;
 }
 
 /*.form-control {
@@ -212,6 +296,16 @@ hr {
 	font-weight: 600;
 	letter-spacing: 2px;
 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	line-height: 100%;
+	color: #333333;
+	margin-bottom: 5px;
+	margin-top: 55px;
+}
+
+hr {
+	border-width: 3px;
 }
 
 #create-workout .container{
@@ -231,7 +325,7 @@ hr {
   position: relative;
   text-align: center;
   text-transform: capitalize;
-  color: #7d7d7d;
+  color: #333333;
 }
 .progressbar li:before {
   width: 50px;
@@ -239,7 +333,7 @@ hr {
   content: "";
 /*      counter-increment: step;*/
   line-height: 50px;
-  border: 2px solid #7d7d7d;
+  border: 2px solid #F04A48;
   display: block;
   text-align: center;
   margin: 0 auto 10px auto;
@@ -251,7 +345,7 @@ hr {
   height: 2px;
   content: '';
   position: absolute;
-  background-color: #7d7d7d;
+  background-color: #F04A48;
   top: 15px;
   left: -50%;
   z-index: -1;
@@ -261,28 +355,39 @@ hr {
   content: none;
 }
 .progressbar li.active {
-  color: green;
+  color: #333333;
 }
 
 .progressbar li.active:before {
-  border-color: #55b776;
+  border-color: #F04A48;
+  background-color: #F04A48;
 }
 .progressbar li.active + li:after {
-  background-color: #55b776;
+  background-color: #F04A48;
 }
 
 #create-workout .size {
 	width: 50%;
 	margin-left: 25%;
+	margin-top: 8%;
 }
-#create-workout input {
-	opacity: 0.8;
+#create-workout input.form-control {
+	font-family: 'Montserrat', sans-serif;
+	opacity: 0.3;
 	letter-spacing: 1px;
+}
+
+.sizing-margin	{
+	margin-top: 15px;
 }
 
 #create-workout h4 {
 	text-align: center;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	font-family: 'Montserrat', sans-serif;
+	color: #333333;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #create-workout .lists {
@@ -299,12 +404,17 @@ hr {
 	border-style: solid;
 	border-width: 1px;
 	padding: 5px;
+	border-color: #BDBDBD;
+	background-color: #F2F2F2;
 }
-
 #create-workout .size-small {
 	width: 100%;
 }
 
+#create-workout .resize-it {
+	width: 85%;
+	margin-left: 5%;
+}
 #create-workout .col-md-10 {
 	width: 38%;
 	margin-left: 25%;
@@ -324,6 +434,7 @@ hr {
 	border-radius: 300px;
 }
 
+<<<<<<< HEAD
 #create-workout .size {
 	width: 50%;
 	margin-left: 25%;
@@ -433,6 +544,153 @@ hr {
 	text-align: center;
 }
 
+=======
+#create-workout .btn-sizing{
+	font-size: 13.5px;
+}
+#create-workout .subtitle{
+	text-align: left;
+	margin-left: 5%;
+	letter-spacing: 2px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#create-workout .resiziing-font {
+	text-align: left;
+	margin-left: 0%;
+	color: #333333 !important;
+	font-size: 75% !important;
+	letter-spacing: 1px;
+}
+#create-workout .container-fluid{
+	height: 200px;
+	background-color: #C4C4C4;
+	opacity: 0.5;
+	margin-left: 6%;
+	margin-right: 6%;
+}
+
+.margin-top{
+	margin-top: 7%;
+}
+
+#create-workout .divided{
+	height: 25px;
+	opacity: 0.8;
+}
+#create-workout .duration{
+	text-align: right;
+	color: #333333;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 41.5%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup h3 {
+	margin-top: 10px !important;
+}
+
+.popup h4 {
+	color: #828282 !important;
+}
+
+.popup {
+  margin: 70px auto;
+  margin-top: 15%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 75%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  height: 75%;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 70%;
+  overflow: auto;
+  margin-top: 12%;
+}
+
+.popup th {
+	cursor: pointer;
+
+}
+.popup th:hover {
+	background-color: #333333 !important;
+	color: #FBF9F4 !important;
+
+}
+
+.popup th:focus {
+	background-color: #333333 !important;
+	color: #FBF9F4 !important;
+
+}
+
+.popup .calendar-bottom {
+	width: 75%;
+	margin-left: 12.5%;
+	background-color: #C4C4C4;
+
+}
+
+.popup .btn-sizing {
+	width: 50%;
+	margin-left: 25%;
+	margin-bottom: 1%;
+}
+.fr.focus, .fr:focus, .fr:hover{
+	background-color: #333333 !important;
+	color: #FBF9F4 !important;
+}
+.popup .mg {
+	margin-left: 48%;
+	color: #828282;
+}
+.popup .mg:hover {
+	text-decoration: none !important;
+	color: #333333;
+}
+.popup .fr {
+	border-radius: 0px !important;
+	background-color: #C4C4C4;
+	color: #333333;
+	font-size: 14px !important;
+	font-weight: 600;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.popup .mg-bottom {
+	margin-bottom: 30px;
+}
+>>>>>>> 06320d135e7ef7b929d4ebd54d3ba42126f0cc2b
 @media (min-width: 1200px) {
 	.container {
 		min-width: 1400px;
@@ -451,6 +709,9 @@ hr {
 	#create-workout .lists {
 		width: 60%;
 	}
+	.popup{
+    width: 70%;
+  	}
 }
 
 
@@ -473,5 +734,8 @@ hr {
 	#create-workout .lists {
 		width: 70%;
 	}
+	.popup{
+    width: 70%;
+  	}
 
 }
