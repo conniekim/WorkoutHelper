@@ -16,135 +16,113 @@ $(document).ready(function() {
     $('#prev-button').click(function() {
         changeWeek--; //have the prev week stuff appear (already have it loaded and just display it)
         // console.log("changeWeek" + changeWeek);
+        setDates(changeWeek); 
     });
 
     $('#next-button').click(function() {
         changeWeek++; //have next week stuff appear (already have it loaded and just display it)
         // console.log("changeWeek: " + changeWeek);
+        setDates(changeWeek);
     });
+
     /* For filling in the calendar of selected week, default = curr */
     var daysArray = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-    for(var i = 0; i < daysArray.length; i++) {
-    	var day = document.getElementById(daysArray[i]); 
-        // console.log("currWeek: " + currWeek); 
-        // console.log("currWeek+0: " + parseInt(currWeek)+0);
-    	day.innerHTML = moment().day(i).year(currYear).week(parseInt(currWeek) + changeWeek).date();
+
+    function setDates(change) {
+        $('td.date').removeClass('current');
+
+        var currMonthDisplay = 0; 
+        var prev = 0; 
+
+        for(var i = 0; i < daysArray.length; i++) {
+        	var day = document.getElementById(daysArray[i]); 
+            var date = moment().day(i).year(currYear).week(parseInt(currWeek) + change).date();
+            if((prev >= 28 && prev <= 31) && (date == 1) && (i >= 0 && i < 4)) {
+                currMonthDisplay = 1; 
+            } //fix this logic by showcase 
+
+        	day.innerHTML = date;
+            if(date === moment().date()) {
+                /* For highlighting the current date of the week */
+                 var todayDay = document.getElementById(currDay.toLowerCase()); 
+                $(todayDay).addClass('current');     
+            }
+
+            prev = date; 
+        }
+
+        var month = document.getElementById('currMonth');
+        if(currMonthDisplay == -1) {
+            month.innerHTML = moment().add(-1, 'months').format('MMM') + " " + moment().format('YYYY');
+        } else if(currMonthDisplay == 1) {
+            month.innerHTML = moment().add(1, 'months').format('MMM') + " " + moment().format('YYYY');
+        } else {
+            month.innerHTML = moment().format('MMM') + " " + moment().format('YYYY'); //gets current month and year
+        }
     }
 
-    /*For filling in current month */
-    var month = document.getElementById('currMonth');
-    month.innerHTML = moment().format('MMM') + " " + moment().format('YYYY'); //gets current month and year
 
-    /* For highlighting the current day of the week */
-    var todayDay = document.getElementById(currDay.toLowerCase()); 
-    $(todayDay).addClass('current'); 
 
-    var query; 
+    /* Getting database information */
+    var daysMap = {}; 
+    var daysUppercase = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; 
+
+    /* Adding to TODO and COMPLETED tasks */
+    $.get("https://ykldkx5wj7.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=WorkoutUserInfoTest", function(data, status) {
+        var json = JSON.parse(JSON.stringify(data));
+        var items = json.Items;
+        var map; 
+        if(items) {
+            map = items[0]; 
+
+            for(var i = 0; i < daysUppercase.length; i++) {
+                var day = daysUppercase[i];
+                if(map.mapAttr[day]) {
+                    daysMap[day] = map.mapAttr[day];
+                } else {
+                    console.log(day + " not defined!");
+                }
+            }
+
+            /* Populate the current day's tasks */
+            var currDay = moment().format('dddd'); 
+            placeTasks(currDay); 
+            setDates(0);   
+            // console.log(moment().date());             
+        } else {
+            $(".to-do").text("No workouts found assigned to the calendar");
+        }
+    });
+
     /* To show the tasks for the one that has been clicked on */
+    var clickedDay = ""; 
     $("td.date").click(function(){
     	$('td.date').removeClass('selected');
     	$(this).addClass('selected');
-    	var curr = $(this).attr('id');
-    	console.log('clicked ' + query);
-        window.location.replace("index.html?varname=" + curr);
+    	clickedDay = $(this).attr('id');
+        // window.location.replace("index.html?varname=" + curr);
+        placeTasks(toTitleCase(clickedDay)); 
 	});
+
+    function placeTasks(day) {
+         document.getElementById('to-do-content').innerHTML = ""; 
+         var tasks = daysMap[day];
+         if(tasks) {
+            for(var start = 0; start < tasks.length; start++) {
+                var eachTask = tasks[start]; 
+                console.log(eachTask);
+                $('#to-do-content').append('<div class="col-xs-12"><div class="task"><div class="task-name">' + toTitleCase(eachTask)
+                    + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
+            }
+        }
+    }
+
+    function toTitleCase(str)
+    {
+        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    }
 
     // END CUSTOM MADE CALENDAR LAYOUT
-
-    var query = decodeURIComponent(window.location.search.split('=')[1]);
-    query = query.replace(/\_/g, " ");
-
-    if (query === 'undefined') {
-        $(todayDay).addClass('selected');
-    } else {
-        $('td.date').removeClass('selected');
-        $('td.date#' + query).addClass('selected');
-    }
-    /* Adding to TODO and COMPLETED tasks */
-	$.get("https://ykldkx5wj7.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=WorkoutUserInfoTest", function(data, status) {
-		var json = JSON.parse(JSON.stringify(data));
-		var items = json.Items;
-		var map; 
-		if (items) { 
-            if (query === 'undefined') {
-                console.log("query is undefined because default");
-                query = moment().format('dddd'); 
-                console.log('default query: ' + query);
-            }
-
-			for (var i = 0; i < items.length; i++) {
-				map = items[i];
-
-				console.log("query: " + query);
-                console.log("day: " + map.mapAttr['Monday']); //
-				// if (map.Day.toLowerCase() === query.toLowerCase()) {
-    //                 console.log("they're matching!");
-				// 	var toDos = dict.ToDo;
-				// 	var completed = dict.Completed;
-    //                 if(toDos) {
-    //                     console.log("they have todos!");
-    // 					for (var j = 0; j < toDos.length; j++) {
-    // 						var toDoTask = toDos[j];
-    // 						$(".to-do").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + toDoTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
-
-    //                    }
-    //                 }
-    //                 if(completed) {
-    //                     console.log("they have completed!");
-    // 					for (var k = 0; k < completed.length; k++) {
-    // 						var completedTask = completed[k];
-    // 						$(".completed").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + completedTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
-    // 					}
-    //                 }
-				// }
-			}
-		} else {
-			$(".to-do").text("No tasks found");
-		}
-	});
-
-    // $.get("https://m6raqib0xd.execute-api.us-east-1.amazonaws.com/prod/ExerciseUpdate?TableName=Calendar", function(data, status) {
-    //     var json = JSON.parse(JSON.stringify(data));
-    //     var items = json.Items;
-    //     var dict; 
-    //     if (items) { 
-    //         if (query === 'undefined') {
-    //             console.log("query is undefined because default");
-    //             query = moment().format('dddd'); 
-    //             console.log('default query: ' + query);
-    //         }
-
-    //         for (var i = 0; i < items.length; i++) {
-    //             dict = items[i];
-    //             // var spacedQuery = query.replace(/\_/g, " ");
-    //             console.log("query: " + query);
-    //             console.log("day: " + dict.Day);
-    //             if (dict.Day.toLowerCase() === query.toLowerCase()) {
-    //                 console.log("they're matching!");
-    //                 var toDos = dict.ToDo;
-    //                 var completed = dict.Completed;
-    //                 if(toDos) {
-    //                     console.log("they have todos!");
-    //                     for (var j = 0; j < toDos.length; j++) {
-    //                         var toDoTask = toDos[j];
-    //                         $(".to-do").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + toDoTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
-
-    //                    }
-    //                 }
-    //                 if(completed) {
-    //                     console.log("they have completed!");
-    //                     for (var k = 0; k < completed.length; k++) {
-    //                         var completedTask = completed[k];
-    //                         $(".completed").append('<div class="col-xs-12"><div class="task"><div class="task-name">' + completedTask + '</div><div class=edit><img src="img/edit.svg"></div><div class="remove"><img src="img/remove.svg"></div></div></div>');
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     } else {
-    //         $(".to-do").text("No tasks found");
-    //     }
-    // });
-
 
 
 
