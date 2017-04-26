@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en">  
-    <head>   
+    <head>  
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -131,81 +131,57 @@
                   <hr>
               
                   <ul class="progressbar">
-                      <li>Categories</li>
+                      <li class="active">Categories</li>
                       <li>Workouts</li>
-                      <li class="active">Review</li>
+                      <li>Review</li>
                   </ul>
                 </div>
                 <div class="container">
+                  <div class="form-group row size">
+                    <div class="col-xs-12">
+                      <input class="form-control" type="text" placeholder="Workout Title" id="example-text-input">
+                    </div>
+                  </div>
                   <div class="col-xs-12"> 
-                    <h4> Workout Review</h4>
+                    <h4> Workout Categories</h4>
                   </div>
-                  <div class="row">
+                  <div class="lists row">
                     <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle"> Workout Title: <small class="resiziing-font"> Muffin-Top Blaster</small></h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle "> Intervals: <small class="resiziing-font"> 45 seconds, 15 seconds rest</small></h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle"> Frequency: <small class="resiziing-font"> Once every 2 days</small> </h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle"> Selected Exercise:</h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
-                        <div class="container-fluid">
-                          <div class="col-md-3">
-                            <div class="thumbnail margin-top">
-                            <img src="img/003-weightlifting.svg" style="width:60%; margin-top: -10%;">
-                            <div class="caption">
-                              <p>Upper Body Mash-up</p>
-                            </div>
-                            </div>
-                          </div>
-                          <div class="workout-icons col-md-3">
-                            <div class="thumbnail margin-top">
-                            <img src="img/003-weightlifting.svg" style="width:60%; margin-top: -10%;">
-                            <div class="caption">
-                              <p>Upper Body Mash-up</p>
-                            </div>
-                            </div>
-                          </div>
-                          <div class="workout-icons col-md-3">
-                            <div class="thumbnail margin-top">
-                            <img src="img/003-weightlifting.svg" style="width:60%; margin-top: -10%;">
-                            <div class="caption">
-                              <p>Upper Body Mash-up</p>
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-<!--                       </div> -->
-                      <div class="divided container-fluid">
-                        <p class="duration"> Durations: 2 mins</p> 
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="option1">
+                          Heads
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="option1">
+                          Shoulders
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="option1">
+                          Abs
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="option1">
+                          Lower Body
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="option1">
+                          Upper Body
+                        </label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="container">
-<!--                   <div class="col-xs-12 sizing-margin"> 
+                  <div class="col-xs-12 sizing-margin"> 
                     <h4> Workout Interval</h4>
                   </div>
                   <div class="row">
@@ -220,42 +196,11 @@
                         <a class="btn btn-secondary" href="#" role="button">mins</a>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                   <div class=" next-button row">
-                    <div class="col-xs-6"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#" role="button">EDIT</a> </div>
-                    <div class="col-xs-6"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#popup1" role="button">CREATE WORKOUT</a> </div>
+                    <div class="col-xs-12"><a class="btn btn-secondary btn-lg btn-block" href="#" role="button">NEXT</a> </div>
                  </div>
                </div>
-               <div id="popup1" class="overlay">
-                <div class="popup">
-                  <h3>Workout Created </h3>
-                  <hr>
-                  <!-- <a class="close" href="#">&times;</a> -->
-                  <div class="content">
-                    <h4>  Selected Day(s)</h4>
-                    <div class="calendar-bottom">
-                      <table>
-                        <tr>
-                          <th class="sunday" id="sunday">Su</th>
-                          <th class="monday" id="monday">M</th>
-                          <th class="tuesday" id="tuesday">T</th>
-                          <th class="wednesday" id="wednesday">W</th>
-                          <th class="thursday" id="thursday">Th</th>
-                          <th class="friday" id="friday">F</th>
-                          <th class="saturday" id="saturday">Sa</th>
-                        </tr>
-                      </table>
-                    </div>
-                    <h4>  Frequency</h4>
-                    <div class="col-xs-12"><a class="fr btn btn-secondary btn-lg btn-block btn-sizing" role="button">Once</a> </div>
-                    <div class="col-xs-12"><a class="fr btn btn-secondary btn-lg btn-block btn-sizing"  role="button">Daily</a> </div>
-                    <div class="col-xs-12"><a class="fr btn btn-secondary btn-lg btn-block btn-sizing" role="button">Weekly</a> </div>
-                    <div class="col-xs-12"><a class="fr btn btn-secondary btn-lg btn-block btn-sizing mg-bottom" role="button">Custom</a> </div>
-                    <div class="col-xs-12"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#" role="button">CREATE WORKOUT</a> </div>
-                    <div class="col-xs-12"><a class="mg" href="#" role="link">SKIP >></a> </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
