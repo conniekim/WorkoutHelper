@@ -472,6 +472,80 @@ hr {
 	text-align: right;
 	color: #333333;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 41.5%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup h3 {
+	margin-top: 10px !important;
+}
+
+.popup h4 {
+	color: #828282 !important;
+}
+
+.popup {
+  margin: 70px auto;
+  margin-top: 25%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 75%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  height: 75%;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 70%;
+  overflow: auto;
+  margin-top: 12%;
+}
+
+.popup th {
+	cursor: pointer;
+
+}
+
+.popup .calendar-bottom {
+	width: 50%;
+	margin-left: 25%;
+	background-color: #C4C4C4;
+
+}
+
+.popup .btn-sizing {
+	width: 50%;
+	margin-left: 25%;
+}
+.popup .mg {
+	margin-left: 48%;
+}
 @media (min-width: 1200px) {
 	.container {
 		min-width: 1400px;
@@ -490,6 +564,9 @@ hr {
 	#create-workout .lists {
 		width: 60%;
 	}
+	.popup{
+    width: 70%;
+  	}
 }
 
 
@@ -512,5 +589,8 @@ hr {
 	#create-workout .lists {
 		width: 70%;
 	}
+	.popup{
+    width: 70%;
+  	}
 
 }
