@@ -373,7 +373,7 @@ hr {
 }
 #create-workout input.form-control {
 	font-family: 'Montserrat', sans-serif;
-	opacity: 0.3;
+	opacity: 0.85;
 	letter-spacing: 1px;
 }
 
@@ -434,7 +434,6 @@ hr {
 	border-radius: 300px;
 }
 
-<<<<<<< HEAD
 #create-workout .size {
 	width: 50%;
 	margin-left: 25%;
@@ -545,7 +544,6 @@ hr {
 	text-align: center;
 }
 
-=======
 #create-workout .btn-sizing{
 	font-size: 13.5px;
 }
@@ -691,7 +689,6 @@ hr {
 .popup .mg-bottom {
 	margin-bottom: 30px;
 }
->>>>>>> 06320d135e7ef7b929d4ebd54d3ba42126f0cc2b
 @media (min-width: 1200px) {
 	.container {
 		min-width: 1400px;
