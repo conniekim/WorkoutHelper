@@ -15,6 +15,7 @@ h2, td, th {
 .btn {
 	background-color: #7CCCCB;
 	color: #FBF9F4;
+	border-radius: 300px;
 }
 .form-control {
 	background-color: #C0C5C3;
@@ -311,6 +312,10 @@ hr {
 #create-workout .container{
 	width: 100%;
 	padding-left: 0px;
+}
+.button-container {
+	margin-left: 25%;
+	width: 50%;
 }
 
 .progressbar {
