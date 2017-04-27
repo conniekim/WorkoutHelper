@@ -495,12 +495,13 @@ hr {
 #workout-section h4{
 	margin-left: 1%;
 	text-align: center;
+	color: #333333;
 }
 
 #workout-section .container-fluid{
 	height: 200px;
 	background-color: #C4C4C4;
-	opacity: 0.5;
+	/*opacity: 0.5;*/
 	margin-left: 2%;
 }
 
@@ -750,4 +751,51 @@ a {
 
 a:hover {
 	text-decoration: none;
+}
+
+.inner-suggested .thumbnail {
+	cursor: pointer;
+}
+
+.inner-suggested .thumbnail:hover {
+	background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
+}
+
+#review-page-selected .thumbnail {
+	margin-top: 5%; 
+}
+
+.selected-thumbnail {
+	background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
+}
+
+#selected-exercises .thumbnail {
+	position: relative;
+}
+
+#selected-exercises .thumbnail:hover {
+	background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.5) );
+
+}
+
+#selected-exercises .thumbnail:hover .middle {
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+.middle {
+  /*transition: .5s ease;*/
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+  text-transform: uppercase;
+}
+
+.text {
+	text-align: center;
+	color: #fff;
 }

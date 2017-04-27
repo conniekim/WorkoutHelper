@@ -131,7 +131,7 @@
                 <div class="container">
                   <div class="form-group row size">
                     <div class="col-xs-12">
-                      <input class="form-control" type="text" placeholder="Workout Title" id="example-text-input">
+                      <input class="form-control" name="title" type="text" placeholder="Workout Title" id="example-text-input">
                     </div>
                   </div>
                   <div class="col-xs-12"> 
@@ -169,17 +169,23 @@
                           Upper Body
                         </label>
                       </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="All">
+                          All Categories
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="container">
                   <div class="col-xs-12 sizing-margin"> 
-                    <h4> Workout Interval</h4>
+                    <h4> Workout Interval </h4>
                   </div>
                   <div class="row">
                     <div class="form-group row size-small">
                       <div class="col-md-10">
-                        <input class="form-control resize-it" type="text" id="example-text-input">
+                        <input class="form-control resize-it" name="interval" type="text" id="example-text-input">
                       </div>
                       <div class="col-md-1" style="margin-left: -5%">
                         <a class="btn btn-secondary" href="#" role="button">secs</a>
@@ -209,73 +215,22 @@
               </div>
               <div class="row col-xs-12" id="suggested-exercises"> 
                 <h4> Suggested Exercises</h4>
-                <div class="container-fluid">
+                <div class="container-fluid"><div class="inner-suggested" id="suggested">
                   <!-- <div class="arrow">
                     <img src="img/left-arrow.svg">
                   </div> -->
-                  <div class="col-md-3">
-                    <div class="thumbnail">
-                    <img src="img/003-weightlifting.svg" style="width:60%">
-                    <div class="caption">
-                      <p>Upper Body Mash-up</p>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="workout-icons col-md-3">
-                    <div class="thumbnail">
-                    <img src="img/003-weightlifting.svg" style="width:60%">
-                    <div class="caption">
-                      <p>Upper Body Mash-up</p>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="workout-icons col-md-3">
-                    <div class="thumbnail">
-                    <img src="img/003-weightlifting.svg" style="width:60%">
-                    <div class="caption">
-                      <p>Upper Body Mash-up</p>
-                    </div>
-                    </div>
-                  </div>
 <!--                   <div class="arrow">
                     <img src="img/right-arrow.svg">
                   </div> -->
-                </div>
+                </div></div>
               </div>
-              <div class="row col-xs-12"> 
+              <div class="row col-xs-12" id="selected-exercises"> 
                 <h4> Selected Exercises</h4>
-                <div class="container-fluid">
-                  <div class="col-md-3">
-                    <div class="thumbnail">
-                    <img src="img/003-weightlifting.svg" style="width:60%">
-                    <div class="caption">
-                      <p>Upper Body Mash-up</p>
-                    </div>
-                    </div>
-                    <!-- <img src="img/remove.svg" class="removing"> -->
-                  </div>
-                  <div class="workout-icons col-md-3">
-                    <div class="thumbnail">
-                    <img src="img/003-weightlifting.svg" style="width:60%">
-                    <div class="caption">
-                      <p>Upper Body Mash-up</p>
-                    </div>
-                    </div>
-                    <!-- <img src="img/remove.svg" class="removing"> -->
-                  </div>
-                  <div class="workout-icons col-md-3">
-                    <div class="thumbnail">
-                    <img src="img/003-weightlifting.svg" style="width:60%">
-                    <div class="caption">
-                      <p>Upper Body Mash-up</p>
-                    </div>
-                    </div>
-                    <!-- <img src="img/remove.svg" class="removing"> -->
-                  </div>
-                </div>
+                <div class="container-fluid"><div class="inner-selected">
+                </div></div>
               </div>
               <div class="row duration-row">
-                <p> Durations: 2 mins</p> 
+                <p> Duration: 2 mins</p> 
               </div>
               <div class=" next-button row">
                     <div class="col-xs-12 col-sm-6" id="second-back-button"><a class="btn btn-secondary btn-lg btn-block" href="#" role="button">BACK</a> </div>
@@ -301,64 +256,22 @@
                   </div>
                   <div class="row">
                     <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle"> Workout Title: <small class="resiziing-font"> Muffin-Top Blaster</small></h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
+                        <h4 class="subtitle" id="workout-title"> Workout Title: <small class="resiziing-font"> Muffin-Top Blaster</small></h4>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle "> Intervals: <small class="resiziing-font"> 45 seconds, 15 seconds rest</small></h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
+                        <h4 class="subtitle" id="workout-interval"> Intervals: <small class="resiziing-font"> 45 seconds, 15 seconds rest</small></h4>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle"> Frequency: <small class="resiziing-font"> Once every 2 days</small> </h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12">
-<!--                       <div class="row col-12"> --> 
-                        <h4 class="subtitle"> Selected Exercise:</h4>
-<!--                       </div> -->
-<!--                       <div class="row col-12">  -->
-                        <div class="container-fluid">
-                          <div class="col-md-3">
-                            <div class="thumbnail margin-top">
-                            <img src="img/003-weightlifting.svg" style="width:60%; margin-top: -10%;">
-                            <div class="caption">
-                              <p>Upper Body Mash-up</p>
-                            </div>
-                            </div>
-                          </div>
-                          <div class="workout-icons col-md-3">
-                            <div class="thumbnail margin-top">
-                            <img src="img/003-weightlifting.svg" style="width:60%; margin-top: -10%;">
-                            <div class="caption">
-                              <p>Upper Body Mash-up</p>
-                            </div>
-                            </div>
-                          </div>
-                          <div class="workout-icons col-md-3">
-                            <div class="thumbnail margin-top">
-                            <img src="img/003-weightlifting.svg" style="width:60%; margin-top: -10%;">
-                            <div class="caption">
-                              <p>Upper Body Mash-up</p>
-                            </div>
-                            </div>
-                          </div>
+                        <h4 class="subtitle"> Selected Exercises:</h4>
+                        <div class="container-fluid" id="review-page-selected">
                         </div>
-<!--                       </div> -->
                       <div class="divided container-fluid">
-                        <p class="duration"> Durations: 2 mins</p> 
+                        <p class="duration"> Duration: 2 mins</p> 
                       </div>
                     </div>
                   </div>
@@ -366,7 +279,7 @@
                 <div class="container">
                   <div class=" next-button row">
                     <div class="col-xs-6" id="edit-button"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#" role="button">EDIT</a> </div>
-                    <div class="col-xs-6"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#popup1" role="button">CREATE WORKOUT</a> </div>
+                    <div class="col-xs-6" id="create-workout-button"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#popup1" role="button">CREATE WORKOUT</a> </div>
                  </div>
                </div>
                <div id="popup1" class="overlay">
@@ -394,7 +307,7 @@
                     <div class="col-xs-12"><a class="fr btn btn-secondary btn-lg btn-block btn-sizing"  role="button">Daily</a> </div>
                     <div class="col-xs-12"><a class="fr btn btn-secondary btn-lg btn-block btn-sizing" role="button">Weekly</a> </div>
                     <div class="col-xs-12"><a class="fr btn btn-secondary btn-lg btn-block btn-sizing mg-bottom" role="button">Custom</a> </div>
-                    <div class="col-xs-12"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#" role="button">CREATE WORKOUT</a> </div>
+                    <div class="col-xs-12"><a class="btn btn-secondary btn-lg btn-block btn-sizing" href="#" role="button">ADD TO CALENDAR</a> </div>
                     <div class="col-xs-12"><a class="mg" href="#" role="link">SKIP >></a> </div>
                   </div>
                 </div>
