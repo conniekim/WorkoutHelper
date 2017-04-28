@@ -147,6 +147,9 @@ h2, td, th {
 	margin-top: 18px;
 }
 
+.top-buffer {
+    margin-top: 12%;
+}
 
 .content-column {
 	background-color: #FBF9F4;
@@ -272,14 +275,6 @@ h3 {
 	line-height: 100%;
 	color: #333333;
 	margin-top: 90px;
-}
-
-h1 {
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 100%;
-    color: #333333;
-    margin-top: 90px;
 }
 
 hr {
@@ -818,13 +813,6 @@ a:hover {
     margin-top: 20px;
 }
 
-#playlist-section h3{
-    text-align: left;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    /*margin-top: 20px;*/
-}
-
 #playlist-section h4{
     margin-left: 1%;
     text-align: left;
@@ -832,22 +820,33 @@ a:hover {
 }
 
 #playlist-section hr{
-    border-width: 1px;
+    border-width: 2px;
     width: 98%;
-    margin-left: 0;
+    margin-left: 0px;
+    margin-bottom: 10px;
 }
 
-#playlist-section .container-fluid{
-    height: 200px;
-    background-color: #C4C4C4;
-    /*opacity: 0.5;*/
-    margin-left: 2%;
+#each-exercise hr{
+    border-width: 2px;
+    width: 98%;
+    margin-left: 0px;
 }
 
-#playlist-section .arrow{
+#each-exercise h5{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 100%;
+    color: #828282;
+    margin-top: 20px;
+    margin-left: 80px;
+    letter-spacing: 2px;
+}
+
+/*#playlist-section .arrow{
     margin-left: 1%;
     margin-top: 10%;
-}
+}*/
 
 #playlist-section .img{
     color: #000;
@@ -861,264 +860,46 @@ a:hover {
     margin-top: 3.5%;
 }
 
-#playlist-section .removing{
-    width:15%; 
-    height: 15%; 
-    border-radius: 25px; 
-    border-color: #000;
-    border-style: solid;
-    border-width: 2px;
-    position: relative;
-    margin-left: 90%;
-    margin-top: -260%;
-}
-
-#playlist-section .divided{
-    height: 20px;
-    width: 102%;
-    margin-left: -0.01%;
-    margin-top: -4.1%;
-    opacity: 0.8;
-}
-#playlist-section p{
-    text-align: center;
-}
-
-#view-workout .btn-sizing{
-    font-size: 13.5px;
-}
-#view-workout .subtitle{
-    text-align: left;
-    margin-left: 5%;
-    letter-spacing: 2px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#view-workout .resiziing-font {
-    text-align: left;
-    margin-left: 0%;
-    color: #333333 !important;
-    font-size: 75% !important;
-    letter-spacing: 1px;
-}
-#view-workout .container-fluid{
-    height: 200px;
-    background-color: #C4C4C4;
-    opacity: 0.5;
-    margin-left: 6%;
-    margin-right: 6%;
-}
-
 .margin-top{
     margin-top: 7%;
 }
 
-#view-workout .divided{
-    height: 25px;
-    opacity: 0.8;
-}
-#view-workout .duration{
-    text-align: right;
-    color: #333333;
-}
-/*.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 41.5%;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+/* View Existing Playlist */
+#playlist-section h4{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 100%;
+    /*color: #828282;*/
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0px;
 }
 
-.popup h3 {
-    margin-top: 10px !important;
-}
-
-.popup h4 {
-    color: #828282 !important;
-}
-
-.popup {
-  margin: 70px auto;
-  margin-top: 15%;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 75%;
-  position: relative;
-  transition: all 5s ease-in-out;
-  height: 75%;
-}
-
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 70%;
-  overflow: auto;
-  margin-top: 12%;
-}
-
-.popup th {
-    cursor: pointer;
-
-}
-.popup th:hover {
-    background-color: #333333 !important;
-    color: #FBF9F4 !important;
-
-}
-
-.popup th:focus {
-    background-color: #333333 !important;
-    color: #FBF9F4 !important;
-
-}
-
-.popup .calendar-bottom {
-    width: 75%;
-    margin-left: 12.5%;
-    background-color: #C4C4C4;
-
-}
-
-.popup .btn-sizing {
-    width: 50%;
-    margin-left: 25%;
-    margin-bottom: 1%;
-}
-.fr.focus, .fr:focus, .fr:hover{
-    background-color: #333333 !important;
-    color: #FBF9F4 !important;
-}
-.popup .mg {
-    margin-left: 48%;
+#playlist-section h5{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 100%;
     color: #828282;
-}
-.popup .mg:hover {
-    text-decoration: none !important;
-    color: #333333;
-}
-.popup .fr {
-    border-radius: 0px !important;
-    background-color: #C4C4C4;
-    color: #333333;
-    font-size: 14px !important;
-    font-weight: 600;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.popup .mg-bottom {
-    margin-bottom: 30px;
-}
-@media (min-width: 1200px) {
-    .container {
-        min-width: 1400px;
-        width: inherit;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    #create-workout .lists {
-        width: 50%;
-    }
-
+    margin-top: 60px;
+    letter-spacing: 2px;
 }
 
-@media (max-width: 992px) {
-    #create-workout .lists {
-        width: 60%;
-    }
-    .popup{
-    width: 70%;
-    }
+#playlist-section p{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 100%;
+    color: #828282;
+    margin-top: 6px;
 }
 
-
-@media (min-width: 992px) {
-    .container {
-        min-width: 970px;
-        width: inherit;
-    }
+#playlist-section .thumbnail img {
+    height: 100%;
+    width: 100%;
 }
-
-
-@media (min-width: 768px) {
-    .container {
-        min-width: 750px;
-        width: inherit;
-    }
-}
-
-@media (max-width: 768px) {
-    #create-workout .lists {
-        width: 70%;
-    }
-    .popup{
-    width: 70%;
-    }
-
-}
-
-#add-thumbnail:hover {
-    background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-.inner-suggested .thumbnail {
-    cursor: pointer;
-}
-
-.inner-suggested .thumbnail:hover {
-    background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
-}
-
-#review-page-selected .thumbnail {
-    margin-top: 5%; 
-}
-
-.selected-thumbnail {
-    background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
-}
-
-#selected-exercises .thumbnail {
-    position: relative;
-}
-
-#selected-exercises .thumbnail:hover {
-    background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.5) );
-
-}
-
-#selected-exercises .thumbnail:hover .middle {
-    opacity: 1;
-    cursor: pointer;
-}*/
 
 
 .middle {
