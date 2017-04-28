@@ -504,7 +504,8 @@ hr {
 }
 
 #workout-section .container-fluid{
-	height: 200px;
+	/*height: 200px;*/
+	min-height: 200px;
 	background-color: #C4C4C4;
 	/*opacity: 0.5;*/
 	margin-left: 2%;
@@ -524,7 +525,7 @@ hr {
 #workout-section .thumbnail{
 	color: #fff;
 	opacity: 1;
-	margin-top: 3.5%;
+	margin-top: 20px;
 }
 
 #workout-section .removing{
@@ -569,9 +570,10 @@ hr {
 	letter-spacing: 1px;
 }
 #create-workout .container-fluid{
-	height: 200px;
+	min-height: 200px;
+	/*height: 200px;*/
 	background-color: #C4C4C4;
-	opacity: 0.5;
+	/*opacity: 0.5;*/
 	margin-left: 6%;
 	margin-right: 6%;
 }
@@ -583,6 +585,7 @@ hr {
 #create-workout .divided{
 	height: 25px;
 	opacity: 0.8;
+	min-height: 0px;
 }
 #create-workout .duration{
 	text-align: right;
@@ -801,4 +804,22 @@ a:hover {
 .text {
 	text-align: center;
 	color: #fff;
+}
+
+.empty-div {
+	text-align: center; 
+	margin-top: 12%;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+.duration-row {
+	clear: both;
+}
+
+.highlight {
+	background-color: #333333 !important;
+    color: #FBF9F4 !important;
 }
