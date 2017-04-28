@@ -168,7 +168,7 @@ $(document).ready(function() {
     });
 
 
-	$('#create-workout-button').click(function(e){   
+	$('#add-to-cal-button').click(function(e){   
 		var theUrl = "https://7x5anc9kic.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=Workouts"; 
 
 		console.log(title);
@@ -192,6 +192,32 @@ $(document).ready(function() {
     		// window.location = 'index.html?submit=success';
     	})
 	});
+
+	$('#skip-button').click(function(e){   
+		var theUrl = "https://7x5anc9kic.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=Workouts"; 
+
+		console.log(title);
+		console.log(interval);
+		console.log(selectedExercises);
+		console.log("workout created"); 
+
+		$.post(theUrl, JSON.stringify({
+            "type": "POST", 
+            "data": {
+                "TableName": "Workouts",
+                //New item information to be posted 
+                "Item": {
+                    "Name" : title, 
+                    "Exercises" : selectedExercises,
+                    "Interval" : interval,
+                }
+            }
+        }), 
+        function(data, status){
+    		// window.location = 'index.html?submit=success';
+    	})
+	});
+
 
 	$('.calendar-bottom th').click(function(e) {
 		if($(this).hasClass('highlight')) {

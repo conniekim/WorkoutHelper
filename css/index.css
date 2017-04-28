@@ -456,6 +456,7 @@ hr {
 #create-workout h4 {
 	text-align: center;
 	letter-spacing: 1px;
+	margin: 15px auto;
 }
 
 #create-workout .lists {
@@ -625,7 +626,7 @@ hr {
 
 .popup {
   margin: 70px auto;
-  margin-top: 15%;
+  margin-top: 8%;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
@@ -681,6 +682,7 @@ hr {
 	width: 50%;
 	margin-left: 25%;
 	margin-bottom: 1%;
+	margin-top: 1%;
 }
 .fr.focus, .fr:focus, .fr:hover{
 	background-color: #333333 !important;
