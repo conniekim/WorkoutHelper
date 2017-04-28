@@ -810,17 +810,36 @@ a:hover {
     padding-left: 10px;
 }*/
 
-#first-suggested h3{
-    text-align: left;
+#browse-suggested h3 {
+    font-weight: 600;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    line-height: 100%;
+    color: #333333;
+    margin-bottom: 5px;
+    margin-top: 55px;
 }
 
-#other-suggested h3{
+#browse-suggested hr {
+    width: 75%;
+    border-width: 3px;
+}
+
+#suggested-section h3{
     text-align: left;
     letter-spacing: 2px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    letter-spacing: 0px;
+}
+
+#suggested-section hr{
+    border-width: 1px;
+    width: 98%;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 #playlist-section h4{
@@ -836,12 +855,6 @@ a:hover {
     margin-bottom: 10px;
 }
 
-#each-exercise hr{
-    border-width: 2px;
-    width: 98%;
-    margin-left: 0px;
-}
-
 #each-exercise h5{
     text-align: left;
     font-family: 'Montserrat', sans-serif;
@@ -851,6 +864,12 @@ a:hover {
     margin-top: 20px;
     margin-left: 80px;
     letter-spacing: 2px;
+}
+
+#each-exercise hr{
+    border-width: 1px;
+    width: 98%;
+    margin-left: 0px;
 }
 
 /*#playlist-section .arrow{
