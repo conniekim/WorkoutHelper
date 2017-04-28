@@ -35,8 +35,12 @@ $(document).ready(function() {
     		return this.value;
 		}).get();
 		// console.log(checkedValues);
-	   	document.getElementById('suggested').innerHTML = "";
-		suggestExercises(checkedValues);
+		if(checkedValues.length == 0) {
+			document.getElementById('suggested').innerHTML = '<div class="empty-div">No categories selected! Please choose a category.</div>';
+		} else {
+		   	document.getElementById('suggested').innerHTML = "";
+			suggestExercises(checkedValues);
+		}
 	});
 
 	$('#second-next-button').click(function(e){    
@@ -185,6 +189,22 @@ $(document).ready(function() {
         function(data, status){
     		// window.location = 'index.html?submit=success';
     	})
+	});
+
+	$('.calendar-bottom th').click(function(e) {
+		if($(this).hasClass('highlight')) {
+			$(this).removeClass('highlight');
+		} else {
+			$(this).addClass('highlight');
+		}
+	});
+
+	$('.popup .freq').click(function(e) {
+		if($(this).hasClass('highlight')) {
+			$(this).removeClass('highlight');
+		} else {
+			$(this).addClass('highlight');
+		}
 	});
 
 
