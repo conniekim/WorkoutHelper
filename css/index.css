@@ -289,7 +289,7 @@ hr {
 small {
 	color: #4F4F4F !important;
 	font-size: 50% !important;
-	margin-left: 28%;
+	margin-left: 26%;
 }
 
 /*.form-control {
@@ -756,6 +756,10 @@ hr {
 	background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
 }
 
+#upperBody-thumbnail:hover {
+    background: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.3) );
+}
+
 a {
 	text-decoration: none;
 }
@@ -795,16 +799,30 @@ a:hover {
 }
 
 /* View Workouts */
-
-/*#playlist-section .container{
+/*
+#playlist-section .container {
     width: 100%;
     padding-left: 10px;
 }*/
+
+#first-suggested h3{
+    text-align: left;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+#other-suggested h3{
+    text-align: left;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 
 #playlist-section h3{
     text-align: left;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    /*margin-top: 20px;*/
 }
 
 #playlist-section h4{
