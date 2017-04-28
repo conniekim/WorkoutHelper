@@ -111,7 +111,7 @@ $(document).ready(function() {
     	$('#create-workout #workout-title small').replaceWith('<small class="resiziing-font">' + title + '</small>');
     	//workout interval from input
     	interval = $("input[name='interval']").val(); 
-    	$('#create-workout #workout-interval small').replaceWith('<small class="resiziing-font">' + interval + ' secs </small>');
+    	$('#create-workout #workout-interval small').replaceWith('<small class="resiziing-font">' + interval + ' secs, 15 secs rest </small>');
 
     	//selected exercises
     	var copySelected = $('.inner-selected').clone(); 
@@ -122,7 +122,9 @@ $(document).ready(function() {
 
     function changeDuration(interval, changeArea) {
     	//duration calculated from interval 
-    	var time = interval * selectedExercises.length; 
+    	var time = (interval * selectedExercises.length) + (15 * selectedExercises.length); 
+    	console.log("selectedExercises: " +selectedExercises);
+    	console.log("selectedExercises length: " + selectedExercises.length);
     	var minutes = Math.floor(time / 60);
     	var seconds = time - minutes * 60;
     	$(changeArea).replaceWith('<p class="duration">Duration: ' + minutes + ' mins ' + seconds + ' secs </small></p>');
@@ -138,9 +140,9 @@ $(document).ready(function() {
         var copied = $(this).clone();
         var exercise = $(this).find('p').text();
         // console.log(exercise);
-        if($.inArray(exercise, selectedExercises) == -1) {
-        	selectedExercises.push(exercise);
-    	}
+        // if($.inArray(exercise, selectedExercises) == -1) {
+    	selectedExercises.push(exercise);
+    	// }
     	// console.log(clicked);
         $("#selected-exercises .container-fluid .inner-selected").append(copied); 
         // clicked.addClass('selected-thumbnail');
