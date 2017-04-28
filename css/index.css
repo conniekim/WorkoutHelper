@@ -320,6 +320,7 @@ hr {
 .button-container {
 	margin-left: 25%;
 	width: 50%;
+	margin-bottom: 5%;
 }
 
 .progressbar {
@@ -554,9 +555,9 @@ hr {
 	text-align: center;
 }
 
-#create-workout .btn-sizing{
+/*#create-workout .btn-sizing{
 	font-size: 13.5px;
-}
+}*/
 #create-workout .subtitle{
 	text-align: left;
 	margin-left: 5%;
@@ -564,6 +565,10 @@ hr {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
+/*#create-workout-button {
+	width: 150%
+}*/
 
 #create-workout .resiziing-font {
 	text-align: left;
