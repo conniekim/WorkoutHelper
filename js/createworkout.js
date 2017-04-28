@@ -1,4 +1,15 @@
 $(document).ready(function() {
+	var query = decodeURIComponent(window.location.search.split('=')[1]);
+	checkSuccess(query); 
+
+	function checkSuccess(success_str) {
+		if(success_str === "success") {
+			// alert("success is here");
+			$(".success-box").css("display", "block");
+		} else {
+			$(".success-box").css("display", "none");
+		}
+	}
 
 	var categoryMap = {"Head": ["In-Place Jogging"], "Shoulders": ["Pushups", "Jumping Jacks"], "Abs": ["Planks", "Arm Bends", "Crunch-Ups", "Squats"], 
 	"Upper Body": ["Planks", "Arm Bends", "Crunch-Ups", "Squats"], "Lower Body": ["Crunch-Ups", "Jumping Jacks"]}; 
@@ -189,7 +200,7 @@ $(document).ready(function() {
             }
         }), 
         function(data, status){
-    		// window.location = 'index.html?submit=success';
+    		window.location = 'view-workout.html?submit=success';
     	})
 	});
 
@@ -214,7 +225,7 @@ $(document).ready(function() {
             }
         }), 
         function(data, status){
-    		// window.location = 'index.html?submit=success';
+    		window.location = 'view-workout.html?submit=success';
     	})
 	});
 
@@ -234,6 +245,9 @@ $(document).ready(function() {
 			$(this).addClass('highlight');
 		}
 	});
+
+	$('.popup').fadeIn('slow');
+
 
 
 });

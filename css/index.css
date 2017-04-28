@@ -964,3 +964,14 @@ input:focus, button:focus {
 	background-color: #333333 !important;
     color: #FBF9F4 !important;
 }
+
+.success-box {
+	display: none;
+	text-align: center; 
+	margin-bottom: 20px;
+    padding: 20px;
+    background-color: #7CCCCB;
+    /*border-radius: 30px;*/
+    color: #fcfcfd;
+    font-size: 18px;
+}
