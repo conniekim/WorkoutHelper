@@ -47,18 +47,18 @@ $(document).ready(function() {
                  var todayDay = document.getElementById(currDay.toLowerCase()); 
                 $(todayDay).addClass('current');     
             }
-
+            
             prev = date; 
         }
 
         var month = document.getElementById('currMonth');
-        if(currMonthDisplay == -1) {
-            month.innerHTML = moment().add(-1, 'months').format('MMM') + " " + moment().format('YYYY');
-        } else if(currMonthDisplay == 1) {
-            month.innerHTML = moment().add(1, 'months').format('MMM') + " " + moment().format('YYYY');
-        } else {
+        // if(currMonthDisplay == -1) {
+        //     month.innerHTML = moment().add(-1, 'months').format('MMM') + " " + moment().format('YYYY');
+        // } else if(currMonthDisplay == 1) {
+        //     month.innerHTML = moment().add(1, 'months').format('MMM') + " " + moment().format('YYYY');
+        // } else {
             month.innerHTML = moment().format('MMM') + " " + moment().format('YYYY'); //gets current month and year
-        }
+        // }
     }
 
 
