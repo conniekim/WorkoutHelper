@@ -89,6 +89,7 @@ h2, td, th {
 	color: #fff;
 	padding-left: 125px;
 	height: 100vh;
+	overflow: scroll;
 }
 
 .middle-column h3{
