@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() { 
 	var query = decodeURIComponent(window.location.search.split('=')[1]);
 	checkSuccess(query); 
 
@@ -134,8 +134,8 @@ $(document).ready(function() {
     function changeDuration(interval, changeArea) {
     	//duration calculated from interval 
     	var time = (interval * selectedExercises.length) + (15 * selectedExercises.length); 
-    	console.log("selectedExercises: " +selectedExercises);
-    	console.log("selectedExercises length: " + selectedExercises.length);
+    	// console.log("selectedExercises: " +selectedExercises);
+    	// console.log("selectedExercises length: " + selectedExercises.length);
     	var minutes = Math.floor(time / 60);
     	var seconds = time - minutes * 60;
     	$(changeArea).replaceWith('<p class="duration">Duration: ' + minutes + ' mins ' + seconds + ' secs </small></p>');
@@ -165,13 +165,13 @@ $(document).ready(function() {
 	//deleting selected exercises by clicking on them 
     $('body').on('click', '#selected-exercises .col-md-3', function() {
         // var clicked = $(this).find("div.exercise-icon"); 
-        console.log("before: " + selectedExercises);
+        // console.log("before: " + selectedExercises);
        	var exercise = $(this).find('p').text();
        	var index = selectedExercises.indexOf(exercise);
        	if (index > -1) {
     		selectedExercises.splice(index, 1);
 		}
-		console.log(selectedExercises);
+		// console.log(selectedExercises);
 
         $(this).remove(); 
 
@@ -182,10 +182,10 @@ $(document).ready(function() {
 	$('#add-to-cal-button').click(function(e){   
 		var theUrl = "https://7x5anc9kic.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=Workouts"; 
 
-		console.log(title);
-		console.log(interval);
-		console.log(selectedExercises);
-		console.log("workout created"); 
+		// console.log(title);
+		// console.log(interval);
+		// console.log(selectedExercises);
+		// console.log("workout created"); 
 
 		$.post(theUrl, JSON.stringify({
             "type": "POST", 
@@ -207,10 +207,10 @@ $(document).ready(function() {
 	$('#skip-button').click(function(e){   
 		var theUrl = "https://7x5anc9kic.execute-api.us-east-1.amazonaws.com/prod/RecipeUpdate?TableName=Workouts"; 
 
-		console.log(title);
-		console.log(interval);
-		console.log(selectedExercises);
-		console.log("workout created"); 
+		// console.log(title);
+		// console.log(interval);
+		// console.log(selectedExercises);
+		// console.log("workout created"); 
 
 		$.post(theUrl, JSON.stringify({
             "type": "POST", 
