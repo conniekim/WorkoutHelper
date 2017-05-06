@@ -64,8 +64,8 @@ $(document).ready(function() {
 
             // console.log(key);
             var firstExer = workoutsExer[key][0];
-            console.log("first exer: " + firstExer);
-            console.log("first exer: " + exercisesImages[firstExer]);
+            // console.log("first exer: " + firstExer);
+            // console.log("first exer: " + exercisesImages[firstExer]);
 
             $('#new-workout-grid .row').append('<div class="col-md-6 workout-square"><div class="thumbnail"><img src="' + exercisesImages[firstExer] + '">' +
                           '<div class="caption"><p>' + key + '</p></div></div></div>');
